@@ -1,5 +1,5 @@
 @import "config";
-@import "mobile";
+
 @import "menu";
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   background: #444;
   height: 100%;
   margin: 0;
-  color: #fff;
+  color: set-text-color($primary-color);
   line-height: 1.5;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -42,7 +42,7 @@ header {
 }
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: 100vh;
   .icons {
     margin-top: 1rem;
     a {
@@ -59,4 +59,82 @@ main {
       margin-top: 20vh;
     }
   }
+  .about-info {
+    display: grid;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    grid-template-areas:
+      "about-image about-bio about-bio"
+      "job-1 job-2 job-3";
+    grid-template-columns: repeat(3, 1fr);
+    .about-image {
+      grid-area: about-image;
+      border-radius: 50%;
+      border: 3px solid $secondary-color;
+      margin: auto;
+    }
+    .about-bio {
+      grid-area: about-bio;
+      font-size: 1.5rem;
+    }
+    .job-1 {
+      grid-area: job-1;
+    }
+    .job-2 {
+      grid-area: job-2;
+    }
+    .job-3 {
+      grid-area: job-3;
+    }
+    .job {
+      background: lighten($primary-color, 5);
+      border-bottom: 5px solid $secondary-color;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  }
 }
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  img {
+    width: 100%;
+    border: 3px solid #fff;
+    &:hover {
+      border-color: $secondary-color;
+      opacity: 0.5;
+      @include easeOut;
+    }
+  }
+}
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+  border: 0;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 5);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import "mobile";

@@ -7,7 +7,11 @@
       font-size: 1rem;
     }
   }
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
+
 @include mediaMd {
   main {
     align-items: center;
@@ -16,6 +20,18 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+    .about-info {
+      grid-template-areas:
+        "about-image"
+        "about-bio"
+        "job-1"
+        "job-2"
+        "job-3";
+      grid-template-columns: 1fr;
+    }
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
   ul.menu-nav,
   div.menu-branding {
@@ -40,5 +56,12 @@
       height: 150px;
       background: url("../images/portrait_small.jpg");
     }
+  }
+}
+@include mediaLg {
+}
+@include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
