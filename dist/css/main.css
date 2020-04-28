@@ -211,6 +211,26 @@ main {
   background: #c4c4c4;
   color: #333; }
 
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .contact .contact-item {
+    padding: 1.5rem 2.5rem;
+    transition: all 1s ease-out;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    border: 3px solid #fff;
+    cursor: pointer; }
+    .contact .contact-item:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: #000; }
+      .contact .contact-item:hover span {
+        color: #000; }
+
 footer {
   text-align: center;
   padding: 1rem;
@@ -218,15 +238,11 @@ footer {
   color: #fff;
   height: 60px; }
 
-@media screen and (max-width: 500px) {
-  main .lg-heading {
-    margin-top: 10vh; }
-  main .sm-heading {
-    font-size: 1rem; }
+@media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (min-width: 501px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
@@ -259,6 +275,10 @@ footer {
       height: 150px;
       background: url("../images/portrait_small.jpg"); } }
 
-@media screen and (min-width: 1171px) {
+@media screen and (max-width: 500px) {
+  main .lg-heading {
+    margin-top: 10vh; }
+  main .sm-heading {
+    font-size: 1rem; }
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: 1fr; } }

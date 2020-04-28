@@ -1,17 +1,10 @@
-@include mediaSm {
-  main {
-    .lg-heading {
-      margin-top: 10vh;
-    }
-    .sm-heading {
-      font-size: 1rem;
-    }
-  }
+@include mediaXl {
   .projects {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-
+@include mediaLg {
+}
 @include mediaMd {
   main {
     align-items: center;
@@ -58,10 +51,17 @@
     }
   }
 }
-@include mediaLg {
-}
-@include mediaXl {
+
+@include mediaSm {
+  main {
+    .lg-heading {
+      margin-top: 10vh;
+    }
+    .sm-heading {
+      font-size: 1rem;
+    }
+  }
   .projects {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
   }
 }
