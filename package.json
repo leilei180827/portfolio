@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "awesome portfolio",
   "main": "index.js",
+  "homepage": "https://leilei180827.github.io/portfolio",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "leilei",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.14.0"
   }
 }
