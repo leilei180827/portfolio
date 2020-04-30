@@ -225,7 +225,7 @@ main {
     border: 3px solid #fff;
     cursor: pointer; }
     .contact .contact-item:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 2rem;
       background: #eece1a;
       color: #000; }
       .contact .contact-item:hover span {
