@@ -129,6 +129,12 @@ main {
   background: lighten($primary-color, 50);
   color: #333;
 }
+.isDisabled {
+  color: $primary-color;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
 //contact page
 .contact {
   display: flex;
